@@ -1,5 +1,6 @@
 import random
 import streamlit as st
+# FIX: Refactored check_guess into logic_utils.py using Copilot Agent mode
 from logic_utils import check_guess, attempt_limit_map
 
 def get_range_for_difficulty(difficulty: str):
@@ -71,6 +72,7 @@ st.sidebar.caption(f"Attempts allowed: {attempt_limit}")
 if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
+# FIX: Fixed attempt limit to 8 using Copilot Agent mode
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
