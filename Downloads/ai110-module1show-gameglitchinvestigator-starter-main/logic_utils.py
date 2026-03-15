@@ -19,6 +19,8 @@ def parse_guess(raw: str):
     raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
 
 
+# FIX: Refactored check_guess into logic_utils.py using Copilot Agent mode
+# FIX: Fixed hint logic to correctly return go higher or go lower using Copilot inline chat
 def check_guess(guess, secret):
     """
     Compare guess to secret and return (outcome, message).
