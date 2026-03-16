@@ -1,38 +1,26 @@
-# 🎮 Game Glitch Investigator: The Impossible Guesser
+# Game Glitch Investigator
 
-## 🚨 The Situation
+A Python number guessing game built with Streamlit, debugged as part of an AI-assisted coding project.
 
-You asked an AI to build a simple "Number Guessing Game" using Streamlit.
-It wrote the code, ran away, and now the game is unplayable. 
+## Demo
 
-- You can't win.
-- The hints lie to you.
-- The secret number seems to have commitment issues.
+The game generates a secret number between 1 and 100. The player has 8 attempts to guess it. After each guess the game gives a hint of go higher or go lower. The score decreases with each wrong guess. The New Game button resets everything and starts a fresh round.
 
-## 🛠️ Setup
+## Bugs Fixed
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the broken app: `python -m streamlit run app.py`
+- **Attempt limit**: The game only allowed 7 attempts instead of 8. Fixed the counter logic in logic_utils.py.
+- **Missing hints**: The game showed no feedback after each guess. Fixed the hint logic to correctly return go higher or go lower based on the guess versus the secret number.
+- **New Game button**: Clicking New Game did not reset the game. Fixed by reinitializing all session state variables on button click.
 
-## 🕵️‍♂️ Your Mission
+## Document Your Experience
 
-1. **Play the game.** Open the "Developer Debug Info" tab in the app to see the secret number. Try to win.
-2. **Find the State Bug.** Why does the secret number change every time you click "Submit"? Ask ChatGPT: *"How do I keep a variable from resetting in Streamlit when I click a button?"*
-3. **Fix the Logic.** The hints ("Higher/Lower") are wrong. Fix them.
-4. **Refactor & Test.** - Move the logic into `logic_utils.py`.
-   - Run `pytest` in your terminal.
-   - Keep fixing until all tests pass!
+### What I learned
+Working through this project taught me that AI generated code needs careful human review. The bugs weren't obvious from reading the code, they only showed up when actually playing the game. I learned to test every fix manually in the live app and not just trust that the code looked right.
 
-## 📝 Document Your Experience
+### How I used AI
+I used Copilot and Claude to help identify bugs, generate fixes, and write pytest tests. AI was helpful for explaining why certain logic was broken, but it also gave me at least one incorrect suggestion that I had to catch and fix manually by playing through the game myself.
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
-
-## 📸 Demo
-
-- [ ] [Insert a screenshot of your fixed, winning game here]
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+### How to run the project
+1. Install dependencies: `python3 -m pip install -r requirements.txt`
+2. Run the app: `python3 -m streamlit run app.py`
+3. Run tests: `python3 -m pytest`
