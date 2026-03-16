@@ -12,6 +12,10 @@ The game generates a secret number between 1 and 100. The player has 8 attempts 
 - **Missing hints**: The game showed no feedback after each guess. Fixed the hint logic to correctly return go higher or go lower based on the guess versus the secret number.
 - **New Game button**: Clicking New Game did not reset the game. Fixed by reinitializing all session state variables on button click.
 
+## pytest 
+<img width="1440" height="260" alt="Screenshot 2026-03-16 at 6 04 07 PM" src="https://github.com/user-attachments/assets/89ea0dce-04af-4019-a6b5-d796f1a50e72" />
+
+
 ## Document Your Experience
 
 ### What I learned
