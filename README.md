@@ -4,7 +4,7 @@ A Python number guessing game built with Streamlit, debugged as part of an AI-as
 
 ## Demo
 
-The New Game button resets everything and starts a fresh round.
+The game generates a secret number between 1 and 100. The player has 8 attempts to guess it. After each guess the game gives a hint of go higher or go lower. The score decreases with each wrong guess. The New Game button resets everything and starts a fresh round.
 
 ## Bugs Fixed
 
